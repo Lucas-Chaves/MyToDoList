@@ -9,4 +9,5 @@ abstract class StorageLocal {
       required Map<String, Object?> columnsValues,
       String? where,
       List<Object?>? whereArgs});
+  Future<List<Map<String, Object?>>> getAllInTable({required String query});
 }

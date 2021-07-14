@@ -17,24 +17,26 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  flutter_bloc: ^7.0.1
-  equatable: ^2.0.3
-  sqflite: ^2.0.0+3
-  pretty_json: ^2.0.0
+  flutter_bloc:
+  equatable:
+  sqflite:
+  json_annotation:
+  pretty_json:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
+  json_serializable:
 
 flutter:
 
 
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/assets/onboard/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
