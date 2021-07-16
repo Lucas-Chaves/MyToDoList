@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pretty_json/pretty_json.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:to_do/theme/theme_dark.dart';
 import 'package:to_do/ui/home/home.dart';
-import 'package:to_do/ui/models/models.dart';
 
-import 'repository/repository.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
