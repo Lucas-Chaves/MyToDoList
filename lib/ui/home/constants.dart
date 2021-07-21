@@ -1,3 +1,5 @@
+import '../../utils/utils.dart';
+
 final String titleOnboard1 = 'Organize sua vida';
 final String descriptionOnboard1 =
     'Agora você pode organizar suas tarefas de uma forma mais rapida e tranquila '
@@ -5,3 +7,5 @@ final String descriptionOnboard1 =
 final String pathImageOnboard1 = 'lib/assets/onboard/onboard_1.png';
 final String buttonOnboard1 = 'Começar';
 
+
+final kCreateTableQuery = 'CREATE TABLE IF NOT EXISTS $kDatabaseName (taskId INTEGER PRIMARY KEY, taskTitle TEXT,taskDescription TEXT,taskDone INTEGER(1),taskCreatedAt TEXT,taskUpdatedAt TEXT)';

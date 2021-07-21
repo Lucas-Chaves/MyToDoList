@@ -1,1 +1,2 @@
-final String kDatabaseName = 'task.db';
+final String kDatabaseFileName = 'task.db';
+final String kDatabaseName = 'task';

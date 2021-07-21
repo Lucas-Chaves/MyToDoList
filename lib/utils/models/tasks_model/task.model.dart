@@ -2,6 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'task.model.g.dart';
 
+
+
 @JsonSerializable()
 class TaskModel {
   final int? taskId;
