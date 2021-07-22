@@ -8,4 +8,4 @@ final String pathImageOnboard1 = 'lib/assets/onboard/onboard_1.png';
 final String buttonOnboard1 = 'Começar';
 
 
-final kCreateTableQuery = 'CREATE TABLE IF NOT EXISTS $kDatabaseName (taskId INTEGER PRIMARY KEY, taskTitle TEXT,taskDescription TEXT,taskDone INTEGER(1),taskCreatedAt TEXT,taskUpdatedAt TEXT)';
+final kCreateTableQuery = 'CREATE TABLE IF NOT EXISTS $kDatabaseName ($taskIdTable INTEGER PRIMARY KEY, $taskTitleTable TEXT,$taskDescriptionTable TEXT,$taskDoneTable INTEGER(1),$taskCreatedAtTable TEXT,$taskUpdatedAtTable TEXT)';

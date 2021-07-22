@@ -1,11 +1,11 @@
 import '../../../repository/local_storage/local_storage.dart';
 
 class CreateDataBaseUseCase {
-  StorageLocal storageLocal;
+  StorageLocal _storageLocal;
 
-  CreateDataBaseUseCase({required this.storageLocal});
+  CreateDataBaseUseCase(this._storageLocal);
 
   Future<void> execute(String query) async {
-    await storageLocal.createTable(query: query);
+    await _storageLocal.createTable(query: query);
   }
 }
