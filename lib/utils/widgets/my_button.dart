@@ -6,8 +6,11 @@ class MyButton extends StatelessWidget {
   final String btnText;
   final VoidCallback? functionButton;
   final Color? colorButton;
+  final double? widthSize;
+  final double? heightSize;
+  final TextStyle? textThemeButton;
 
-  const MyButton({Key? key, this.btnText = "", this.functionButton, this.colorButton}) : super(key: key);
+  const MyButton({Key? key, this.btnText = "", this.functionButton, this.colorButton, this.widthSize, this.textThemeButton, this.heightSize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,11 @@ class MyButton extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(borderRadiusPrimaryButton))),
         alignment: Alignment.center,
         margin: EdgeInsets.symmetric(horizontal: kHeightM, vertical: kWidthM),
-        width: MediaQuery.of(context).size.width,
+        width: widthSize?? MediaQuery.of(context).size.width,
+        height: heightSize?? kHeightL,
         child: Text(
           btnText,
-          style: getTextTheme.button,
+          style: textThemeButton?? getTextTheme.button,
         ),
       ),
       onTap: functionButton ?? (){},

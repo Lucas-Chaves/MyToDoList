@@ -53,8 +53,25 @@ class _HomePageState extends State<HomePage> {
                   if (state.status == HomeStatus.loading) {
                     return CircularProgressIndicator();
                   }
-                  if(state.status == HomeStatus.failure){
-                    WidgetsBinding.instance!.addPostFrameCallback((_) {showAlertDialog(context);});
+                  if (state.status == HomeStatus.failure) {
+                    WidgetsBinding.instance!.addPostFrameCallback((_) {
+                      showAlertDialog(
+                          context: context,
+                          actions: [
+                            Container(
+                              alignment: Alignment.bottomRight,
+                              child: MyButton(
+                                btnText: "Entendi",
+                                functionButton: () {
+                                  Navigator.pop(context);
+                                },
+                              ),
+                            ),
+                          ],
+                          content: Text(
+                              "Parece que o cachorro comeu seu bloco de notas, tente novamente."),
+                          title: Text("Algo errado"));
+                    });
                   }
                   return Expanded(
                     child: MyButton(
