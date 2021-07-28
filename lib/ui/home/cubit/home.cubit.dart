@@ -15,7 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
     try{
       emit(state.copyWith(status: HomeStatus.loading));
       await createDataBaseUseCase.execute(kCreateTableQuery);
-      emit(state.copyWith(status: HomeStatus.failure));
+      emit(state.copyWith(status: HomeStatus.nextPage));
     }catch(e){
       emit(state.copyWith(status: HomeStatus.failure));
     }

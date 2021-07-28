@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../theme/theme.dart';
 
 
-class MyButton extends StatelessWidget {
+class ButtonDraco extends StatelessWidget {
   final String btnText;
   final VoidCallback? functionButton;
   final Color? colorButton;
@@ -10,7 +10,7 @@ class MyButton extends StatelessWidget {
   final double? heightSize;
   final TextStyle? textThemeButton;
 
-  const MyButton({Key? key, this.btnText = "", this.functionButton, this.colorButton, this.widthSize, this.textThemeButton, this.heightSize}) : super(key: key);
+  const ButtonDraco({Key? key, this.btnText = "", this.functionButton, this.colorButton, this.widthSize, this.textThemeButton, this.heightSize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

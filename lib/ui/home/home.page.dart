@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:to_do/ui/home/cubit/cubit.dart';
+import './cubit/cubit.dart';
 import '../../ui/ui.dart';
 import '../../utils/utils.dart';
 import '../../theme/theme.dart';
@@ -60,21 +60,20 @@ class _HomePageState extends State<HomePage> {
                           actions: [
                             Container(
                               alignment: Alignment.bottomRight,
-                              child: MyButton(
-                                btnText: "Entendi",
+                              child: ButtonDraco(
+                                btnText: understand,
                                 functionButton: () {
                                   Navigator.pop(context);
                                 },
                               ),
                             ),
                           ],
-                          content: Text(
-                              "Parece que o cachorro comeu seu bloco de notas, tente novamente."),
-                          title: Text("Algo errado"));
+                          content: Text(popUpDescription),
+                          title: Text(popUpTitle));
                     });
                   }
                   return Expanded(
-                    child: MyButton(
+                    child: ButtonDraco(
                       btnText: buttonOnboard1,
                       colorButton: Theme.of(context).primaryColor,
                       functionButton: () async {
