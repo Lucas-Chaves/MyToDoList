@@ -7,7 +7,7 @@ class DataBaseUtils {
   static Future<Database> getDatabase() async {
     try {
       String databasesPath = await getDatabasesPath();
-      String path = join(databasesPath, kDatabaseName);
+      String path = join(databasesPath, kDatabaseFileName);
       Database database = await openDatabase(path);
       print("database is running and open: " + database.isOpen.toString());
       return database;

@@ -3,19 +3,19 @@ import 'package:to_do/theme/theme_dark.dart';
 import 'package:to_do/ui/home/home.dart';
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MainApp extends StatefulWidget {
+  const MainApp({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MainAppState createState() => _MainAppState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'My ToDo List',
       theme: themeData,
       home: HomePage(),
     );

@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 
-import 'usecase/storage_local.dart';
+import '../storage_local.dart';
 
 class StorageLocalImpl implements StorageLocal {
   final Database database;
