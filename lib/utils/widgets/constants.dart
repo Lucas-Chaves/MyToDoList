@@ -1,0 +1,1 @@
+final waitLoading = "Carregando por favor aguarde";

@@ -5,25 +5,25 @@ import 'package:to_do/repository/local_storage/local_storage.dart';
 import './ui/ui.dart';
 import './main_app.dart';
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   Database db = await DataBaseUtils.getDatabase();
   StorageLocalImpl storageLocalImpl = StorageLocalImpl(db);
 
-  final providers = [
-    BlocProvider<HomeCubit>(
-      create: (BuildContext context) => HomeCubit(
-        createDataBaseUseCase: CreateDataBaseUseCase(storageLocalImpl),
-      ),
-    ),
-  ];
-
   runApp(
     MultiBlocProvider(
-      providers: providers,
+      providers: [
+        BlocProvider<HomeCubit>(
+          create: (BuildContext context) => HomeCubit(
+              createDataBaseUseCase: CreateDataBaseUseCase(storageLocalImpl)),
+        ),
+        BlocProvider<TaskCubit>(
+          create: (BuildContext context) => TaskCubit(
+            getAllDataUseCase: GetAllDataUseCase(storageLocalImpl),
+          ),
+        ),
+      ],
       child: MainApp(),
     ),
   );
